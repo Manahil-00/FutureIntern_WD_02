@@ -1,0 +1,305 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    flex-direction: row; /* Default layout for larger screens */
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.hero-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.hero-text li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 350px; /* Adjust the size as needed */
+    height: 350px; /* Adjust the size as needed */
+    border-radius: 10%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits well within the circle */
+    max-width: none;
+}
+
+/* About Section */
+.about {
+    background-color: #f4f4f4;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    text-align: center;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text within the container */
+}
+
+.profile-img {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fits inside the circle */
+    margin-bottom: 20px;
+    border: 5px solid #fff; /* Optional border for a clean look */
+}
+
+/* Projects Section */
+.projects {
+    background-color: #fff;
+    padding: 60px 20px;
+    height: auto; /* Adjust height to fit content */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f4f4;
+    padding: 0px 20px;
+    min-height: calc(100vh - 60px); /* Adjust height to fit screen and avoid overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.contact form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #ff4757;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when menu is active */
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stacks content vertically on smaller screens */
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 70%; /* Adjust image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .about, .projects, .contact {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout for smaller screens */
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact input, .contact textarea {
+        padding: 12px; /* Adjust padding for smaller screens */
+    }
+
+    /* Navbar Toggle Button */
+    .navbar-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+/* Add styles for navbar toggle button */
+.navbar-toggle {
+    display: none; /* Hidden by default */
+}
+
+/* Media query for mobile menu toggle */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Show toggle button on mobile screens */
+    }
+}

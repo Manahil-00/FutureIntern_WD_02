@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="#">Manahil</a></h1>
+            <button class="navbar-toggle">&#9776;</button> <!-- Menu icon for mobile -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>"Hi, I'm Manahil Amjad,</h1>
+                <p>A passionate Front-End Developer skilled in:</p>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React.js</li>
+                </ul>
+            </div>
+            <div class="hero-image">
+                <img src="Images/pic.jpg" alt="Your Image">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="Images/pic1.png" alt="Your Photo" class="profile-img">
+                <p>"Hello! I'm Manahil, a dedicated Front-End Developer with a passion for crafting visually appealing and user-friendly websites. With a strong background in HTML, CSS, JavaScript, and React.js, I excel at building responsive and dynamic web applications that offer exceptional user experiences. Over the past years, I’ve had the opportunity to work on a range of projects, from creating responsive layouts to implementing interactive features. My academic experience has allowed me to integrate various front-end technologies seamlessly. i have made different projects, clone of a website also as my project in university. Here, i have mentioned few.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="Images/project1 (1).png" alt="Project 1">
+                    <h3>Landing page</h3>
+                    <p>"Recently, I designed and developed a sleek landing page using HTML and CSS. This project allowed me to focus on creating a responsive layout and an engaging user experience. The result is a visually appealing page that showcases my ability to implement modern web design principles."</p>
+                </div>
+                <div class="project-card">
+                    <img src="Images/project2.png" alt="Project 2">
+                    <h3>Using react</h3>
+                    <p>A website using React.js to enhance my skills in modern front-end development. This project involved replicating the site's functionality and design, showcasing my ability to work with React components and state management. It was a valuable exercise in creating dynamic, responsive user interfaces.</p>
+                </div>
+                <div class="project-card">
+                    <img src="Images/project4.png" alt="Project 3">
+                    <h3>TextUtility</h3>
+                    <p>"I developed a text utilities website in react js that provides essential text manipulation features. The site allows users to easily convert text to uppercase, remove unnecessary spaces, and count the number of words. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 manahil. All rights reserved.</p>
+           
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.navbar-toggle');
+            const navLinks = document.querySelector('.nav-links');
+    
+            toggleButton.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
